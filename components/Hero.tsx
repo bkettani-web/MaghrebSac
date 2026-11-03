@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
   return (
-    <section className="relative min-h-[640px] lg:h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
+    <section className="relative min-h-[720px] lg:min-h-screen flex flex-col justify-center overflow-hidden pt-36 pb-20 md:pt-44 md:pb-28">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -21,17 +21,19 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
         <div className="absolute inset-0 bg-[radial-gradient(#10b981_1px,transparent_1px)] [background-size:24px_24px] opacity-10" />
       </div>
 
-      <div className="container mx-auto px-4 z-10 text-center md:text-left">
+      <div className="container mx-auto px-4 z-10 text-center md:text-left my-auto">
         <div className="max-w-3xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 text-xs sm:text-sm font-semibold mb-6 backdrop-blur-sm shadow-sm">
-              <Sprout className="w-4 h-4 text-emerald-400" />
-              Maghreb Sac • Fabricant & Spécialiste Toile de Paillage Tissée
-            </span>
+            <div className="mb-6 flex justify-center md:justify-start">
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 text-xs sm:text-sm font-semibold backdrop-blur-sm shadow-sm">
+                <Sprout className="w-4 h-4 text-emerald-400 shrink-0" />
+                Maghreb Sac • Fabricant & Spécialiste Toile de Paillage Tissée
+              </span>
+            </div>
             <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6 drop-shadow-md">
               La toile de paillage haute résistance pour <span className="text-emerald-400">vos cultures & espaces verts</span>
             </h1>
